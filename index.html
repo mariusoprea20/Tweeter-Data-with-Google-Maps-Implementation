@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!--*********************************************
+******************************************
+ Title: Cloud Assignment
+ Author: Marius Oprea
+ Date: 10/05/2023
+ Code version: jQuery Core 2.2.4
+ Availability: https://releases.jquery.com/
+-->
+    <meta charset="utf-8">
+    <title>Cloud Assignment</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOURKEY"></script>
+    <script type="text/javascript" src="script/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Working with Twitter Data</h1>
+    </header>
+    <main id="input-fields">
+        <!--Div to display the distance infor-->
+        <div id="direction-container">
+            <div id="distance-info"></div>
+            <div id="directionsPanel"></div>
+        </div>
+        <!--divs to display the map and routes-->
+        <div id="map-area"></div>
+        <!--divs to display the weather-->
+        <div id="weather-info">
+            <div id="buttons">
+                <!--Button to get/clear direction info&routes-->
+                <button id="get-direction" type="submit">Direction Info</button>
+                <button id="clear-direction">Clear Direction</button>
+
+                <!--Create a form to re-direct the user to the Google OAuth page-->
+                <form id="authentication" action="index.php" method="post">
+                    <button type="submit">Authenticate</button>
+                </form>
+            </div>
+            <h3>Weather</h3>
+            <p><strong>Name:</strong> <span id="username"></span></p>
+            <p><strong>Clouds:</strong> <span id="clouds"></span></p>
+            <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+            <p><strong>Windspeed:</strong> <span id="windspeed"></span></p>
+        </div>
+        <div id="tweets"></div>
+
+    </main>
+    <footer>
+        <p>&copy; MariusOPR</p>
+    </footer>
+</body>
+
+</html>
